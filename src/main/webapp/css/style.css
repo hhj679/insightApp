@@ -1,0 +1,149 @@
+@CHARSET "UTF-8";
+
+body {
+    font: 12px arial;
+    text-align: ;
+    background: #fff;
+}
+
+#result_logo {
+    display: none;
+    width: 150px;
+    height: 70px;
+}
+
+#result_logo img{
+    width: 150px;
+    height: 70px;
+}
+
+a {
+    color: #00c;
+}
+
+.s_ipt_wr {
+    border: 1px solid #b6b6b6;
+    border-color: #7b7b7b #b6b6b6 #b6b6b6 #7b7b7b;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 539px;
+    margin-right: 0;
+    border-right-width: 0;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8;
+    overflow: hidden;
+        height: 34px;
+}
+
+.quickdelete-wrap {
+    position: relative;
+}
+
+.s_ipt_wr.bg, .s_btn_wr.bg, #su.bg {
+    background-image: none;
+}
+
+.s_ipt {
+    width: 526px;
+    height: 22px;
+    font: 16px/18px arial;
+    line-height: 22px\9;
+    margin: 6px 0 0 7px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+.quickdelete-wrap input {
+    width: 500px;
+}
+
+#kw {
+    position: relative;
+}
+
+.bg {
+    background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_0e814c16.png);
+    background-repeat: no-repeat;
+    _background-image: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/icons_5c448026.gif);
+}
+
+.s_btn_wr {
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid transparent;
+    display: inline-block;
+    background-position: -120px -48px;
+    z-index: 0;
+    vertical-align: top;
+        float: right;
+}
+
+.s_ipt_wr.bg, .s_btn_wr.bg, #su.bg {
+    background-image: none;
+}
+
+.s_btn {
+    width: 100px;
+    height: 36px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border-bottom: 1px solid #2d78f4;
+    outline: medium;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    cursor: pointer;
+}
+
+.s_ipt_wr.bg, .s_btn_wr.bg, #su.bg {
+    background-image: none;
+}
+
+#head {
+    position: relative;
+    padding-bottom: 0;
+    height: 100%;
+    min-height: 600px;
+        text-align: center;
+}
+
+#head .head_wrapper {
+    height: 600px;
+}
+
+.s_form {
+    position: relative;
+    top: 38.2%;
+}
+
+.s_form_wrapper {
+    position: relative;
+    top: -191px;
+}
+
+img {
+    border: 0;
+}
+
+#form {
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    z-index: 100;
+}
+
+#wrapper {
+    min-width: 810px;
+    height: 100%;
+    min-height: 600px;
+        position: relative;
+}
+
+#main{
+	display: none;
+	margin: 30px auto;
+}
