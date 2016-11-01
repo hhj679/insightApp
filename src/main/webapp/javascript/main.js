@@ -42,15 +42,22 @@ $(document).ready(function(){
 		function splitData(rawData) {
 		    var categoryData = '';
 		    var values = [];
+		    var mvalues = [];
 		    var volumns = [];
 		    for (var i = 0; i < rawData.length; i++) {
 		        categoryData=rawData[i][0];
 		        volumns.push(rawData[i][1]);
 		        values.push(rawData[i][2]);
+		        if(i>0) {
+		        	mvalues.push(rawData[i][2] + mvalues[i-1]);
+		        } else {
+		        	mvalues.push(rawData[i][2]);
+		        }
 		    }
 		    return {
 		        categoryData: categoryData,
 		        values: values,
+		        mvalues: mvalues,
 		        volumns: volumns
 		    };
 		}
@@ -63,18 +70,19 @@ $(document).ready(function(){
 				console.log(data);
 				var rowData = splitData(data);
 				
-				var myChart = echarts.init(document.getElementById('main'));
 				// 指定图表的配置项和数据
-				var option = {
+				var common_option = {
 					    title: {
-					    	text: '项目starred趋势图',
+					    	text: '项目starrd升涨趋势',
 					        subtext: '数据来自github.com'
 					    },
 					    tooltip: {
 					        trigger: 'axis'
 					    },
 					    legend: {
-					        data:[rowData.categoryData]
+					    	align: "right", //程度标的目标地位
+					    	orient: "horizontal", //垂直标的目标地位
+					        data:[rowData.categoryData/*, rowData.categoryData + '月Starred数'*/]
 					    },
 					    toolbox: {
 					        show: true,
@@ -103,13 +111,26 @@ $(document).ready(function(){
 					        {
 					            name: rowData.categoryData,
 					            type:'line',
-					            data: rowData.values
+					            data: rowData.mvalues
 					        }
 					    ]
 					};
 
-				// 使用刚指定的配置项和数据显示图表。
-				myChart.setOption(option);
+				//Starrd 升涨趋势
+				var option1 = common_option;
+				var myChart1 = echarts.init(document.getElementById('chart1'));
+				myChart1.setOption(option1);
+				
+				//月Starred数
+				var option2 = common_option;
+				option2.title.text = ['项目月Starrd数'];
+				option2.series[0] = {
+					name: rowData.categoryData,
+					type : 'line',
+					data: rowData.values
+				};
+				var myChart2 = echarts.init(document.getElementById('chart2'));
+				myChart2.setOption(option2);
 			},
 			error:function(){
 				alert('request api fail!');

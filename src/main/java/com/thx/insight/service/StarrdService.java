@@ -25,11 +25,11 @@ public class StarrdService extends BaseService<Starrd, Long> {
 	
 	public List<?> getRepoStarsTimeLine(String repoFullName) {
 		List<?> starrds = starrdDao.getRepoStarsTimeLine(repoFullName);
-		for(int i=1; i<starrds.size(); i++) {
-			Object[] nMonthStarrd = (Object[]) starrds.get(i);
-			Object[] lMonthStarrd = (Object[]) starrds.get(i-1);
-			nMonthStarrd[2] = (Long)lMonthStarrd[2] + (Long)nMonthStarrd[2];
-		}
+//		for(int i=1; i<starrds.size(); i++) {
+//			Object[] nMonthStarrd = (Object[]) starrds.get(i);
+//			Object[] lMonthStarrd = (Object[]) starrds.get(i-1);
+//			nMonthStarrd[2] = (Long)lMonthStarrd[2] + (Long)nMonthStarrd[2];
+//		}
 		return starrds;
 	}
 }

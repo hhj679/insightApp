@@ -84,6 +84,21 @@
 			<version>1.16.2</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency> 
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.4.1</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-configuration/commons-configuration -->
+			<dependency>
+			    <groupId>commons-configuration</groupId>
+			    <artifactId>commons-configuration</artifactId>
+			    <version>1.6</version>
+			</dependency>
+		
 	</dependencies>
 
 	<build>
